@@ -1,0 +1,74 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    line-height: 1;
+
+    img {
+      max-height: 36px;
+      margin-right: 8px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--heading-color);
+    }
+
+    span {
+      color: var(--accent-color);
+      font-size: 26px;
+      font-weight: 700;
+    }
+  }
+
+  .header-social-links {
+    padding: 0 0 0 15px;
+
+    a {
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      padding-left: 10px;
+      display: inline-block;
+      transition: 0.3s;
+      font-size: 16px;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+
+      i {
+        line-height: 0px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .logo {
+      order: 1;
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    .header-social-links {
+      order: 2;
+      padding: 0 15px 0 0;
+    }
+
+    .navmenu {
+      order: 3;
+    }
+  }
+}
